@@ -1,0 +1,14 @@
+{
+  "Colors": {
+    "Favorite": "blue"
+  },
+  "ConnectionStrings": {
+    "BitCoinIndexConnectionString": "server =(localdb)\\ProjectsV13;Database=CurrencyDb;Trusted_Connection=True;MultipleActiveResultSets=true;User Id=sa;Password=pwd"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning"
+    }
+  }
+}

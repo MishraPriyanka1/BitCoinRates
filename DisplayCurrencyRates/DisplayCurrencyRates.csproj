@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="obj\Debug\netcoreapp2.1\DisplayCurrencyRates.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\netcoreapp2.1\DisplayCurrencyRates.RazorAssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\netcoreapp2.1\DisplayCurrencyRates.deps.json" />
+    <Content Include="bin\Debug\netcoreapp2.1\DisplayCurrencyRates.runtimeconfig.dev.json" />
+    <Content Include="bin\Debug\netcoreapp2.1\DisplayCurrencyRates.runtimeconfig.json" />
+    <Content Include="obj\Debug\netcoreapp2.1\DisplayCurrencyRates.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\DisplayCurrencyRates.csproj.nuget.dgspec.json" />
+    <Content Include="obj\project.assets.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\netcoreapp2.1\DisplayCurrencyRates.dll" />
+    <None Include="obj\Debug\netcoreapp2.1\DisplayCurrencyRates.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\netcoreapp2.1\DisplayCurrencyRates.assets.cache" />
+    <None Include="obj\Debug\netcoreapp2.1\DisplayCurrencyRates.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\netcoreapp2.1\DisplayCurrencyRates.csprojAssemblyReference.cache" />
+    <None Include="obj\Debug\netcoreapp2.1\DisplayCurrencyRates.pdb" />
+    <None Include="obj\Debug\netcoreapp2.1\DisplayCurrencyRates.RazorAssemblyInfo.cache" />
+    <None Include="obj\Debug\netcoreapp2.1\DisplayCurrencyRates.RazorTargetAssemblyInfo.cache" />
+    <None Include="obj\DisplayCurrencyRates.csproj.nuget.cache" />
+    <None Include="obj\DisplayCurrencyRates.csproj.nuget.g.props" />
+    <None Include="obj\DisplayCurrencyRates.csproj.nuget.g.targets" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.14" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="3.7.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="OdeToCode.UseNodeModules" Version="1.0.6" />
+  </ItemGroup>
+
+</Project>
