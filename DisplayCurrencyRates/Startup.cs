@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DisplayCurrencyRates.Data;
-using DisplayCurrencyRates.Data.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -27,16 +26,31 @@ namespace DisplayCurrencyRates
             services.AddDbContext<CurrencyContext>( cfg => {
                 cfg.UseSqlServer(_config.GetConnectionString("BitCoinIndexConnectionString"));
             });
-            services.AddScoped<IBitCoinRepository, BitCoinRepository>();
             services.AddMvc();
-            
-
+            services.AddRouting(options =>
+            {
+                options.ConstraintMap.Add("start", typeof(DateTime));
+            });
         }
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseStaticFiles();
-            app.UseMvc();
+            app.UseNodeModules(env);
+            app.UseMvc(routes =>
+            {
+                //routes.MapRoute(
+                //    name: "default",
+                //    template:"{controller=Currency}/{action=GetRates}"
+                //    );
+                routes.MapRoute(
+                           name: "getrates",
+                           template: "Currency/GetRates/{start}",
+                           defaults: new { controller = "Currency", action = "GetRates" , start = DateTime.Now.AddDays(-14) });
+                          
+            });
+
         }
     }
 }
