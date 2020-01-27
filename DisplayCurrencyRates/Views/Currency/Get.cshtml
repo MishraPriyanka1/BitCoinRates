@@ -1,5 +1,5 @@
 ﻿   
-    @model  IEnumerable<DisplayCurrencyRates.Data.Entities.BitCoinIndex>
+    @model  IDictionary<string,double>
     @section Scripts {
     <script src="~/clientapp/runtime-es5.js"></script>
     <script src="~/clientapp/polyfills-es5.js"></script>
@@ -7,4 +7,24 @@
     <script src="~/clientapp/vendor-es5.js"></script>
     <script src="~/clientapp/main-es2015.js"></script>
     }
-    <currency-root></currency-root>
+<table class="table">
+    <tr>
+        <th>
+           Date
+        </th>
+        <th>
+            Price
+        </th>
+    </tr>
+
+    @foreach (var item in Model){
+    <tr>
+        <td>
+            @item.Key
+        </td>
+        <td>
+            @item.Value
+        </td>
+    </tr>
+            }
+</table>

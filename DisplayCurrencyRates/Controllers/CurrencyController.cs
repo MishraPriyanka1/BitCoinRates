@@ -20,12 +20,6 @@ namespace DisplayCurrencyRates.Controllers
     [Route("api/[controller]")]
     public class CurrencyController : Controller
     {
-        private IBitCoinRepository _bitcoinRepository;
-
-        public CurrencyController(IBitCoinRepository bitCoinRepository)
-        {
-            _bitcoinRepository = bitCoinRepository;
-        }
         // GET: api/<controller>
         [HttpGet]
         public IActionResult Get()
