@@ -1,7 +1,7 @@
 # BitCoinRates
 
-Entity Framework used for creating Migrations & Database
-Seed Data used to enter last two weeks data in the database if empty
-ASP.Net Core Web Application 
-Angular V8 with npm dependencies and Angular CLI 
+ASP.Net Core Web Application
+Please type in url https://localhost:portnumber/api/currency
+This way you will be able to run the application.
+Angular V8 with npm dependencies and Angular CLI added for future use.
 

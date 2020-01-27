@@ -40,14 +40,10 @@ namespace DisplayCurrencyRates
             app.UseNodeModules(env);
             app.UseMvc(routes =>
             {
-                //routes.MapRoute(
-                //    name: "default",
-                //    template:"{controller=Currency}/{action=GetRates}"
-                //    );
+
                 routes.MapRoute(
-                           name: "getrates",
-                           template: "Currency/GetRates/{start}",
-                           defaults: new { controller = "Currency", action = "GetRates" , start = DateTime.Now.AddDays(-14) });
+                           name: "default",
+                           template: "api/{controller=currency}");
                           
             });
 
