@@ -46,6 +46,7 @@ namespace DisplayCurrencyRates
                            template: "api/{controller=currency}");
                           
             });
+            app.Run(context => context.Response.WriteAsync("Please type api/currency in Url"));
 
         }
     }
